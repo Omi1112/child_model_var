@@ -1,17 +1,22 @@
-/* tslint:disable */
-export class Photo {
-    url?: string;
-}
 
+/*
+ * ------------------------------------------------------
+ * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+ * -------------------------------------------------------
+ */
+
+/* tslint:disable */
+/* eslint-disable */
 export abstract class IQuery {
     abstract user(id?: number): User | Promise<User>;
-
-    abstract temp__(): boolean | Promise<boolean>;
 }
 
 export class User {
     id: string;
     name?: string;
+    photos?: Photo[];
+}
 
-    abstract photos(page?: number): Photo | Promise<Photo>;
+export class Photo {
+    url?: string;
 }

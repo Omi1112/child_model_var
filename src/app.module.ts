@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
-// import { NewsModule } from './news/news.module';
+import { UserModule } from './user/user.module';
 
 @Module({
 	imports: [
-		// NewsModule,
+		UserModule,
 		GraphQLModule.forRoot({
 			typePaths: ['./**/*.graphql'],
 

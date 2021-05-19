@@ -1,8 +1,7 @@
-// import { Module } from '@nestjs/common';
-// import { NewsApiResolvers } from './user.resolvers';
-// import { NewsApiService } from './news.service';
+import { Module } from '@nestjs/common';
+import { UserResolver } from './user.resolvers';
 
-// @Module({
-// 	providers: [NewsApiService, NewsApiResolvers],
-// })
-// export class NewsModule {}
+@Module({
+	providers: [UserResolver],
+})
+export class UserModule {}

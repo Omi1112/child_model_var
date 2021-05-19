@@ -1,10 +1,11 @@
-// import { Args, Query, Resolver } from '@nestjs/graphql';
-// import { User } from '../graphql.schema';
+import { Args, Query, Resolver } from '@nestjs/graphql';
+import { User } from '../graphql.schema';
 
-// @Resolver('NewsApi')
-// export class NewsApiResolvers {
-// 	@Query()
-// 	async user(@Args('options') options: SourceInput): Promise<User> {
-// 		return await this.newService.sources(options);
-// 	}
-// }
+@Resolver()
+export class UserResolver {
+  @Query()
+  async user(@Args() id: number): Promise<User> {
+    console.log(id);
+    return { id: '1', name: 'bar' };
+  }
+}
